@@ -1,1 +1,14 @@
+EnablePrimaryMouseEvents(true)
 
+function OnEvent(event, arg)
+    --OutputLogMessage("Event: "..event.." Arg: "..arg.."\n")
+
+if IsKeyPressed("P") then 
+    repeat 
+        PressMouseButton(1)
+        ReleaseMouseButton(1)
+        Sleep(math.random(29, 36)) 
+        PressMouseButton(1)
+        ReleaseMouseButton(1) ---- Syntax Error(Show up almost everywhere when I change the code) 
+    until not IsKeyPressed("P") then 
+end
